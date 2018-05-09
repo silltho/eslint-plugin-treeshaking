@@ -61,6 +61,28 @@ ruleTester.run('no-namespace-imports', rule, {
           type: 'ExpressionStatement'
         }
       ]
+    },
+    {
+      code: `
+        import * as lib1 from 'libary1'
+        import {func1} from 'libary2'
+        import Lib3 from 'libary3'
+        
+        func1()
+        
+        export const export1 = 'export1'
+        export const exportFunc = () => 'exportFunc'
+        export default {
+          export1,
+          export2: 'export2'
+        }
+      `,
+      errors: [
+        {
+          message: 'sideeffects are not allowed',
+          type: 'ExpressionStatement'
+        }
+      ]
     }
   ]
 })
