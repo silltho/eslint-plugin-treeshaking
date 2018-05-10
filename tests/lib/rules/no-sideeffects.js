@@ -26,8 +26,8 @@ let ruleTester = new RuleTester()
 ruleTester.run('no-sideeffects', rule, {
   valid: [
     {
-      options: ['entry.js'],
-      filename: 'entry.js',
+      options: ['src/entry.js'],
+      filename: 'test/usr/src/entry.js',
       code: `
         import * as lib1 from 'libary1'
         import {func1} from 'libary2'
@@ -45,8 +45,8 @@ ruleTester.run('no-sideeffects', rule, {
 
   invalid: [
     {
-      options: ['entry.js'],
-      filename: 'entry.js',
+      options: ['src/entry.js'],
+      filename: 'test/usr/src/entry.js',
       code: `
         import * as lib1 from 'libary1'
         import {func1} from 'libary2'
@@ -69,8 +69,8 @@ ruleTester.run('no-sideeffects', rule, {
       ]
     },
     {
-      options: ['entry.js'],
-      filename: 'entry.js',
+      options: ['src/entry.js'],
+      filename: 'test/usr/src/entry.js',
       code: `
         import * as lib1 from 'libary1'
         import {func1} from 'libary2'
