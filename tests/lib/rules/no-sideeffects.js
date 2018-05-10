@@ -25,22 +25,28 @@ RuleTester.setDefaultConfig({
 let ruleTester = new RuleTester()
 ruleTester.run('no-sideeffects', rule, {
   valid: [
-    `
-    import * as lib1 from 'libary1'
-    import {func1} from 'libary2'
-    import Lib3 from 'libary3'
-    
-    export const export1 = 'export1'
-    export const exportFunc = () => 'exportFunc'
-    export default {
-      export1,
-      export2: 'export2'
+    {
+      options: ['entry.js'],
+      filename: 'entry.js',
+      code: `
+        import * as lib1 from 'libary1'
+        import {func1} from 'libary2'
+        import Lib3 from 'libary3'
+        
+        export const export1 = 'export1'
+        export const exportFunc = () => 'exportFunc'
+        export default {
+          export1,
+          export2: 'export2'
+        }
+      `
     }
-  `
   ],
 
   invalid: [
     {
+      options: ['entry.js'],
+      filename: 'entry.js',
       code: `
         import * as lib1 from 'libary1'
         import {func1} from 'libary2'
@@ -63,6 +69,8 @@ ruleTester.run('no-sideeffects', rule, {
       ]
     },
     {
+      options: ['entry.js'],
+      filename: 'entry.js',
       code: `
         import * as lib1 from 'libary1'
         import {func1} from 'libary2'
