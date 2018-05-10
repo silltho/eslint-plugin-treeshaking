@@ -23,7 +23,7 @@ RuleTester.setDefaultConfig({
 //------------------------------------------------------------------------------
 
 let ruleTester = new RuleTester()
-ruleTester.run('no-namespace-imports', rule, {
+ruleTester.run('no-sideeffects', rule, {
   valid: [
     `
     import * as lib1 from 'libary1'
