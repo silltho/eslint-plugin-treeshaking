@@ -42,4 +42,6 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-* Fill in provided rules here
+* empty-imports
+* entry-point-sideeffects
+* named-exports-sideeffects
