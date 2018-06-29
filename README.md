@@ -11,7 +11,7 @@ $ npm i eslint --save-dev
 Next, install `eslint-plugin-treeshaking`:
 
 ```
-$ npm install git+ssh://git@github.com:silltho/eslint-plugin-thesis.git
+$ npm install git+ssh://git@github.com:silltho/eslint-plugin-treeshaking.git
 
 or
 
