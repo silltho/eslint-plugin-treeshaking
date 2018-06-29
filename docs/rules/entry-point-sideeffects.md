@@ -1,4 +1,4 @@
-# -todo- (sideeffects-named-exports)
+# -todo (entry-point-sideeffects)
 
 Please describe the origin of the rule here.
 

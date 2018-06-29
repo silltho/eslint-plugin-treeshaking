@@ -8,7 +8,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-var rule = require('../../../lib/rules/sideeffects-named-exports'),
+var rule = require('../../../lib/rules/named-exports-sideeffects'),
   RuleTester = require('eslint').RuleTester
 
 RuleTester.setDefaultConfig({
@@ -23,7 +23,7 @@ RuleTester.setDefaultConfig({
 //------------------------------------------------------------------------------
 
 var ruleTester = new RuleTester()
-ruleTester.run('sideeffects-named-exports', rule, {
+ruleTester.run('named-exports-sideeffects', rule, {
   valid: [
     {
       options: [],
@@ -74,7 +74,7 @@ ruleTester.run('sideeffects-named-exports', rule, {
       errors: [
         {
           message:
-            'Effects on reexported modules (test2) could be prune away by TreeShaking.',
+            'Effects on reexported modules (test2) could be prune by TreeShaking.',
           type: 'ExpressionStatement'
         }
       ]
@@ -89,7 +89,7 @@ ruleTester.run('sideeffects-named-exports', rule, {
       errors: [
         {
           message:
-            'Effects on reexported modules (test2) could be prune away by TreeShaking.',
+            'Effects on reexported modules (test2) could be prune by TreeShaking.',
           type: 'ExpressionStatement'
         }
       ]
@@ -104,7 +104,7 @@ ruleTester.run('sideeffects-named-exports', rule, {
       errors: [
         {
           message:
-            'Effects on reexported modules (temp1) could be prune away by TreeShaking.',
+            'Effects on reexported modules (temp1) could be prune by TreeShaking.',
           type: 'ExpressionStatement'
         }
       ]
@@ -119,7 +119,7 @@ ruleTester.run('sideeffects-named-exports', rule, {
       errors: [
         {
           message:
-            'Effects on reexported modules (counter) could be prune away by TreeShaking.',
+            'Effects on reexported modules (counter) could be prune by TreeShaking.',
           type: 'ExpressionStatement'
         }
       ]
