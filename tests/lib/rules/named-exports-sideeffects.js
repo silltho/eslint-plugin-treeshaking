@@ -41,6 +41,18 @@ ruleTester.run('named-exports-sideeffects', rule, {
     {
       options: [],
       code: `
+          testFunction = () => {
+            console.log('test')
+          }
+          export {
+            testFunction
+          }
+        `,
+      errors: []
+    },
+    {
+      options: [],
+      code: `
           import name from "module-name";
           import name2 from "module-name2";
           console.log('test123')
