@@ -1,4 +1,4 @@
-# eslint-plugin-silltho-plugin
+# eslint-plugin-treeshaking
 
 ## Installation
 
@@ -8,25 +8,25 @@ You'll first need to install [ESLint](http://eslint.org):
 $ npm i eslint --save-dev
 ```
 
-Next, install `eslint-plugin-silltho`:
+Next, install `eslint-plugin-treeshaking`:
 
 ```
 $ npm install git+ssh://git@github.com:silltho/eslint-plugin-thesis.git
 
 or
 
-$ npm install eslint-plugin-silltho --save-dev
+$ npm install eslint-plugin-treeshaking --save-dev
 ```
 
-**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-silltho` globally.
+**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-treeshaking` globally.
 
 ## Usage
 
-Add `silltho` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `treeshaking` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
 
 ```json
 {
-  "plugins": ["silltho"]
+  "plugins": ["treeshaking"]
 }
 ```
 
@@ -35,7 +35,7 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
   "rules": {
-    "silltho/rule-name": 2
+    "treeshaking/rule-name": 2
   }
 }
 ```
