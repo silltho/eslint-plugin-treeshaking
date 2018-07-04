@@ -11,12 +11,12 @@
     "precommit": "pretty-quick --staged"
   },
   "dependencies": {
-    "requireindex": "~1.1.0"
+    "requireindex": "~1.1.0",
+    "micromatch": "^3.1.10"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
     "husky": "^0.14.3",
-    "micromatch": "^3.1.10",
     "mocha": "^3.5.3",
     "path": "^0.12.7",
     "prettier": "^1.11.1",
