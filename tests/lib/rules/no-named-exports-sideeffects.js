@@ -8,7 +8,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-var rule = require('../../../lib/rules/named-exports-sideeffects'),
+var rule = require('../../../lib/rules/no-named-exports-sideeffects'),
   RuleTester = require('eslint').RuleTester
 
 RuleTester.setDefaultConfig({

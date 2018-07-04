@@ -8,7 +8,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-var rule = require('../../../lib/rules/entry-point-sideeffects'),
+var rule = require('../../../lib/rules/no-entry-point-sideeffects'),
   RuleTester = require('eslint').RuleTester
 
 RuleTester.setDefaultConfig({
@@ -53,6 +53,16 @@ ruleTester.run('entry-point-sideeffects', rule, {
       code: `
         import module from 'module'
         console.log('test')
+        export const export1 = 'export1'
+        export default 'default'
+      `,
+      errors: []
+    },
+    {
+      options: ['**/src/entry.js'],
+      filename: 'test/usr/src/entry.js',
+      code: `
+        import module from 'module'
         export const export1 = 'export1'
         export default 'default'
       `,

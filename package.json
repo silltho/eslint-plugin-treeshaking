@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-treeshaking",
   "version": "0.0.0",
-  "description": " ",
+  "description": "﻿Webpack Tree Shaking Support",
   "keywords": ["eslint", "eslintplugin", "eslint-plugin"],
   "author": "silltho",
   "main": "lib/index.js",

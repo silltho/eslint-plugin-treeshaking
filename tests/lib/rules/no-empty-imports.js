@@ -8,7 +8,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-var rule = require('../../../lib/rules/empty-imports'),
+var rule = require('../../../lib/rules/no-empty-imports'),
   RuleTester = require('eslint').RuleTester
 
 RuleTester.setDefaultConfig({
