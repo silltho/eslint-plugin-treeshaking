@@ -65,6 +65,7 @@ ruleTester.run('entry-point-sideeffects', rule, {
         import module from 'module'
         export const export1 = 'export1'
         export default 'default'
+        export * from 'module1'
       `,
       errors: []
     }
